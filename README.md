@@ -2,6 +2,8 @@
 
 本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo，旨在帮助开发者快速了解和实践 SpringAI 在实际业务场景中的应用。项目涵盖了 AI 聊天、向量数据库、RAG 检索增强生成、文档读取、音频处理、图片生成等多种典型场景。
 
+中文文档参考（目前真正手操中文文档）：https://scn8eld7jhpg.feishu.cn/wiki/OOO2woWuJiCYf0kEJtpcfSHonw3
+
 ---
 
 ## 目录结构
