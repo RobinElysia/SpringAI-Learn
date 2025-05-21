@@ -1,0 +1,24 @@
+spring:
+  neo4j:
+    uri: <neo4j instance URI>
+    authentication:
+      username: <neo4j username>
+      password: <neo4j password>
+  application:
+    name: AI
+  ai:
+    vectors tore:
+      neo4j:
+        initialize-schema: true
+        database-name: neo4j
+        index-name: custom-index
+        distance-type: cosine
+        embedding-dimension: 1536
+        label: Image
+        embedding-property: embedding
+    openai:
+      base-url: https://api.deepseek.com
+      api-key: sk-d9486f9778e449ca9056dcff47a04919
+      chat:
+        options:
+          model: deepseek-chat

@@ -1,0 +1,8 @@
+springai\ai\AiApplication.class
+springai\ai\server\ImpServerAPI.class
+springai\ai\server\ServerAPI.class
+springai\ai\controller\ImpControllerAPI.class
+springai\ai\controller\chat\chatContextController.class
+springai\ai\controller\ControllerAPI.class
+springai\ai\config\SpringAIConfig.class
+springai\ai\config\WebConfig.class
