@@ -1,6 +1,10 @@
 # SpringAI 学习测试 Demo 项目
 
-本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo，旨在帮助开发者快速了解和实践 SpringAI 在实际业务场景中的应用。项目涵盖了 AI 聊天、向量数据库、RAG 检索增强生成、文档读取、音频处理、图片生成等多种典型场景。
+本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo。
+旨在帮助开发者快速了解和实践 SpringAI 在实际业务场景中的应用。
+项目涵盖了 AI 聊天、嵌入向量、多模态、多文档阅读器、提示词、向量数据库、RAG 检索增强生成、文档读取、音频处理、图片生成等多种样例代码。
+
+各位可以根据目前给出的样例代码结合英文文档学习，当然我也提供了中文文档：
 
 中文文档参考（目前正在手操中文文档）：https://scn8eld7jhpg.feishu.cn/wiki/OOO2woWuJiCYf0kEJtpcfSHonw3
 
