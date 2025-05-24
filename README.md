@@ -6,7 +6,7 @@
 
 各位可以根据目前给出的样例代码结合英文文档学习，当然我也提供了中文文档：
 
-中文文档参考（目前正在手操中文文档）：https://scn8eld7jhpg.feishu.cn/wiki/OOO2woWuJiCYf0kEJtpcfSHonw3
+中文文档参考（目前正在手操中文文档）：https://hcnxcb6dq341.feishu.cn/wiki/TghiwB6vai9KcRkb7t5cxjdjnBY?fromScene=spaceOverview
 
 ---
 
