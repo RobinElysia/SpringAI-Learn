@@ -20,6 +20,8 @@ AIDevelop/
 │   │   │   │   ├── config/        # 配置类
 │   │   │   │   ├── reader/        # 文档读取与处理
 │   │   │   │   ├── VectorSQL/     # 向量数据库相关
+│   │   │   │   ├── multimodal/    # 多模态相关
+│   │   │   │   ├── structuredOutput/  # 结构化输出
 │   │   │   │   ├── RAG/           # RAG 相关
 │   │   │   │   ├── Prompt/        # Prompt 相关
 │   │   │   └── resources/
@@ -31,17 +33,25 @@ AIDevelop/
 ## 主要功能模块
 
 - **AI 聊天**  
-  集成 ChatClient，支持上下文记忆、系统提示、Advisor 拦截器等功能。示例代码见 `model/ChatTest.java`。
+  集成 ChatClient，支持上下文记忆、系统提示、Advisor 拦截器等功能。示例代码见 `model/`。
 - **向量数据库**  
   支持 Neo4j、MongoDB、ElasticSearch 等多种向量存储，提供文档嵌入、相似度检索等能力。示例代码见 `VectorSQL/` 目录。
-- **RAG 检索增强生成**  
-  实现多种 QueryTransformer、Retriever、Advisor 组合，支持复杂的检索增强生成流程。示例代码见 `RAG/RAGTest.java`。
+- **RAG 检索增强生成 与 ETL技术**  
+  实现多种 QueryTransformer、Retriever、Advisor 组合，支持复杂的检索增强生成流程。示例代码见 `RAG/`。
 - **文档读取与处理**  
   支持 TXT、PDF、Markdown、HTML、Tika 等多种文档格式的读取与向量化。示例代码见 `reader/` 目录。
 - **音频处理**  
-  集成 OpenAI 语音模型，支持语音转文本、文本转语音。示例代码见 `model/AudioSpeechToTextTest.java` 和 `model/AudioTextToSpeechTest.java`。
+  集成 OpenAI 语音模型，支持语音转文本、文本转语音。示例代码见 `model/`。
 - **图片生成与处理**  
   支持图片生成、图片消息等。示例代码见 `model/ImageTest.java`。
+- **多模态**  
+    多模态相关示例代码。见 `multimodal/`。
+- **多文档阅读器**
+    MD、HTML、PDF、TXT 等，见 `reader/` 目录。
+- **提示词**
+    提示词模板，见 `Prompt/` 目录。
+- **结构化输出**
+    三个实现类，List、Map、Bean实体类，见 `model/`。
 
 ## 环境依赖
 
@@ -56,12 +66,7 @@ AIDevelop/
    参考 `pom.xml` 和 `AI/pom.xml`，已集成 SpringAI 及相关依赖。
 2. **配置 application.yml**  
    在 `AI/src/main/resources/application.yml` 配置 Neo4j、OpenAI 等相关参数。
-3. **启动项目**  
-   ```sh
-   cd AI
-   ./mvnw spring-boot:run
-   ```
-4. **接口测试**  
+3. **接口测试**  
    通过 Postman 或其他工具访问 `/api/chat`、`/api/EmbeddingTest`、`/api/Audio` 等接口，体验各类 AI 能力。
 
 ## 参考文档
