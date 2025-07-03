@@ -45,12 +45,17 @@ public class StructuredOutputMapTest {
         String format = structuredOutputConverter.getFormat();
 
         // 模板
-        PromptTemplate promptTemplate = new PromptTemplate("Tell me a {format} joke about topic",
-                (java.util.Map<String, Object>) new HashMap<>().put("format", format));
+        PromptTemplate promptTemplate = PromptTemplate
+                .builder()
+                .template("Tell me a {format} joke about topic")
+                .variables((Map<String, Object>) new HashMap<>().put("format", format))
+                .build();
         // 创建一个 Prompt 对象
         prompt = promptTemplate.create();
 
-        MessageChatMemoryAdvisor messageChatMemoryAdvisor = new MessageChatMemoryAdvisor(chatMemory);
+        MessageChatMemoryAdvisor messageChatMemoryAdvisor = MessageChatMemoryAdvisor
+                .builder(chatMemory)
+                .build();
         ChatClient.CallResponseSpec call = chatClient
                 .prompt(prompt)
                 .user(map.get("message").toString())

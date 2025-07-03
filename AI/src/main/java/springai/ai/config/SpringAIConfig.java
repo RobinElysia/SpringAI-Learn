@@ -2,7 +2,7 @@ package springai.ai.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.*;
-import org.springframework.ai.chat.memory.cassandra.CassandraChatMemory;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.prompt.ChatOptions;
 import org.springframework.ai.chat.prompt.DefaultChatOptions;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -23,11 +23,11 @@ import java.util.List;
 @SuppressWarnings({"all"})
 public class SpringAIConfig {
     @Autowired
-    private CassandraChatMemory chatMemory;
-    @Autowired
     private AiLogConfig aiLogConfig;
     @Autowired
     private VectorStore vectorStore;
+    @Autowired
+    private ChatMemory chatMemory;
 
     DefaultChatOptions defaultChatOptions = new DefaultChatOptions();   // 默认的ChatOptions
     // 这里默认设置默认参数，企业级开发根据需求自行调节默认参数
@@ -88,10 +88,10 @@ public class SpringAIConfig {
                 "，可以帮助开发作者开发Spring生态应用，同时你还精通人工智能、大数据、爬虫、后端开发！,你需要正在 {messages} 帮助我")
                 .defaultOptions(chatOptions)    // 加入自定义参数，或者中直接使用默认参数defaultChatOptions
                 .defaultUser("用中文回复我！") // 默认输入模板
+                .defaultTools()
                 .defaultAdvisors(
                         new SafeGuardAdvisor(strings,"",1),
-                        new PromptChatMemoryAdvisor(chatMemory),
-                        new MessageChatMemoryAdvisor(chatMemory)
+                        PromptChatMemoryAdvisor.builder(chatMemory).build()
                 )  // 默认的Advice
                 .build();
     }
