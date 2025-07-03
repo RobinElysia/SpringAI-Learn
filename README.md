@@ -2,7 +2,7 @@
 
 本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo。
 旨在帮助开发者快速了解和实践 SpringAI 在实际业务场景中的应用。
-项目涵盖了`AI 聊天、嵌入向量、多模态、多文档阅读器、提示词、向量数据库、RAG 检索增强生成、ETL技术、结构化输出、文档读取、音频处理、图片生成`等多种样例代码。
+项目涵盖了`AI 聊天、嵌入向量、多模态、多文档阅读器、提示词、向量数据库、RAG 检索增强生成、ETL技术、结构化输出、文档读取、音频处理、图片生成、ToolCalling、MCP`等多种样例代码。
 
 各位可以根据目前给出的样例代码结合英文文档学习，当然我也提供了中文文档：
 
@@ -28,6 +28,8 @@ AIDevelop/
 │   │   │   │   ├── structuredOutput/  # 结构化输出
 │   │   │   │   ├── RAG/           # RAG 相关
 │   │   │   │   ├── Prompt/        # Prompt 相关
+│   │   │   │   ├── toolCall/        # toolCall 相关
+│   │   │   │   ├── ChatMemory/        # ChatMemory 相关
 │   │   │   └── resources/
 │   │   │       └── application.yml
 │   │   └── test/
@@ -56,6 +58,10 @@ AIDevelop/
     提示词模板，见 `Prompt/` 目录。
 - **结构化输出**
     三个实现类，List、Map、Bean实体类，见 `model/`。
+- **函数调用**
+    工具调用，见 `toolCall/`。
+- **ChatMemory**
+    聊天记忆，见 `ChatMemory/`。
 
 ## 环境依赖
 
