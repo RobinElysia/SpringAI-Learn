@@ -18,7 +18,7 @@ spring:
         embedding-property: embedding
     openai:
       base-url: https://api.deepseek.com
-      api-key: sk-d9486f9778e449ca9056dcff47a04919
+      api-key: 
       chat:
         options:
           model: deepseek-chat
