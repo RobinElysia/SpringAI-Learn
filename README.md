@@ -1,6 +1,6 @@
 # SpringAI 学习测试 Demo 项目
 
-作者是Spring AI M8 贡献者之一。本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo。
+作者是Spring AI M8 里程碑贡献者之一。本项目是一个基于 Spring Boot 和 SpringAI 的学习与测试 Demo。
 旨在帮助开发者快速了解和实践 SpringAI 在实际业务场景中的应用。
 项目涵盖了`AI 聊天、嵌入向量、多模态、多文档阅读器、提示词、向量数据库、RAG 检索增强生成、ETL技术、结构化输出、文档读取、音频处理、图片生成、ToolCalling、MCP`等多种样例代码。
 
